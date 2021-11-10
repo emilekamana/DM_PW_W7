@@ -2,10 +2,9 @@
 # and outputs a truth value (’True’ or ’False’) for the following statement:
 # ∀x ∈ X, ∃y ∈ Y such that y | x.
 
-
 def check_user_input(usr_input):
     try:
-        # Convert user input into integer
+        # Convert it into integer
         val = int(usr_input)
         return val
     except ValueError:
@@ -29,15 +28,15 @@ for i in range(len(input_Y)):
 
 
 def divisibility(list1, list2):
-    is_divisible = True
+    divisible = []
     for x in list1:
         for y in list2:
-            if x % y != 0:
-                is_divisible = False
-    if is_divisible:
-        print('The statement ∀x ∈ X, ∃y ∈ Y such that y | x, is true.')
-    else:
+            if x % y == 0:
+                divisible.append(x)
+    if set(list1).difference(set(divisible)):
         print('The statement ∀x ∈ X, ∃y ∈ Y such that y | x, is false.')
+    else:
+        print('The statement ∀x ∈ X, ∃y ∈ Y such that y | x, is true.')
 
 
 divisibility(input_X, input_Y)
