@@ -16,4 +16,4 @@ print("A-B: " + str(A.difference(B)))
 
 # cartesian product of A and B.
 cartesian_product = product(list(A), list(B))
-print("cartesian product: " + str(set(cartesian_product)))
+print("AXB: " + str(set(cartesian_product)))
