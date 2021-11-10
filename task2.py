@@ -1,6 +1,6 @@
-#import itertools
 from itertools import product
-#getting user input
+
+# getting user input
 user_input1 = input("Please enter items in the list A ")
 user_input2 = input("Please enter items in the list B ")
 
